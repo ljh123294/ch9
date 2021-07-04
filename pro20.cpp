@@ -1,0 +1,22 @@
+#include <string>
+#include <list>
+#include <deque>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    list<int> list = {1, 2, 3, 4, 5, 6};
+    deque<int> deque_odd, deque_even;
+    for (const auto &i : list)
+    {
+        (i % 2) ? deque_odd.push_back(i) : deque_even.push_back(i);
+    }
+    for (const auto i : deque_odd)
+        cout << i << " ";
+    cout << endl;
+    for (const auto i : deque_even)
+        cout << i << " ";
+    cout << endl;
+    return 0;
+}
